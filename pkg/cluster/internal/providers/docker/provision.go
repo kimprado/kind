@@ -183,7 +183,7 @@ func commonArgs(cluster string, cfg *config.Cluster, networkName string, nodeNam
 		// retries is 0, so only restart on reboots.
 		// however this _actually_ means the same thing as always
 		// so the closest thing is on-failure:1, which will retry *once*
-		"--restart=on-failure:1",
+		"--restart=no",
 		// this can be enabled by default in docker daemon.json, so we explicitly
 		// disable it, we want our entrypoint to be PID1, not docker-init / tini
 		"--init=false",
